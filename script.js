@@ -1,5 +1,4 @@
 const myLibrary = [];
-// const idBtn = document.querySelector("#id-btn");
 const showBtn = document.querySelector("#show-btn");
 const bookForm = document.getElementById("form-info"); 
 const addBookFormButton = bookForm.querySelector("button[type='button']"); 
@@ -15,19 +14,6 @@ function Books(name, author, pages, read, id) {
     this.read = read;
     this.id = id;
 }
-
-// idBtn.addEventListener("click",  
-//     function addBookToLibrary() {
-//         const uuid = crypto.randomUUID();
-//         let book = new Books 
-//             (prompt("nombre?: "), 
-//             prompt("autor?"), 
-//             prompt("paginas?"), 
-//             confirm("Leido?"),
-//             uuid);
-//         myLibrary.push(book);
-//     }
-// );
 
 showBtn.addEventListener("click", function showBooks(){
     for (let i = 0; i < myLibrary.length; i++) {};
