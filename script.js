@@ -24,23 +24,11 @@ idBtn.addEventListener("click",
     }
 );
 
-// showBtn.addEventListener("click",
-//         function showBooks() {
-//             for (let i = 0; i < myLibrary.length; i++) {
-//             console.table(myLibrary[i]);
-//         }
-//     };
-// )
-
 showBtn.addEventListener("click", function showBooks(){
-    for (let i = 0; i < myLibrary.length; i++) {
-        console.table(myLibrary);
-    }
+    for (let i = 0; i < myLibrary.length; i++) {};
+    console.table(myLibrary);
 });
 
-// addBookToLibrary();
-// showBooks(); 
 
-// console.table(myLibrary);
 
 
