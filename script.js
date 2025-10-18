@@ -1,6 +1,5 @@
 const myLibrary = [];
 const idBtn = document.querySelector("#id-btn")
-const generateIdbtn = document.querySelector("#generate-idBtn") 
 
 function Books(name, author, pages, id) {
     if(!new.target) {
