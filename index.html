@@ -6,6 +6,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <form action="">
+        <label for="add_book">add book</label>
+        <input type="text" name="add_book" id="add_book" placeholder="Add a Book">
+        <div class="leido">
+            <div>
+                <input type="radio" id="child" name="ticket_type" value="child">
+                <label for="child">Child</label>
+            </div>
+            <div>
+                <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+                <label for="adult">Adult</label>
+            </div>
+        </div>
+    </form>
     <div class="idButton">
         <button id="id-btn">add book</button>
         <button id="show-btn">Show Books</button>

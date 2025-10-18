@@ -20,7 +20,6 @@ idBtn.addEventListener("click",
             prompt("autor?"), 
             prompt("paginas?"), uuid);
         myLibrary.push(book);
-        console.table(myLibrary);
     }
 );
 
