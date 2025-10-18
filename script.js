@@ -1,7 +1,19 @@
 const myLibrary = [];
-const showBtn = document.querySelector("#show-btn");
+const showButton = document.querySelector("#show-button");
 const bookForm = document.getElementById("form-info"); 
 const addBookFormButton = bookForm.querySelector("button[type='button']"); 
+const dialogElem = document.getElementById("dialog");
+const showBtn = document.querySelector(".show");
+const closeBtn = document.querySelector(".close");
+
+
+showBtn.addEventListener("click", () => {
+  dialogElem.showModal();
+});
+
+closeBtn.addEventListener("click", () => {
+  dialogElem.close();
+});
 
 function Books(name, author, pages, read, id) {
     if(!new.target) {
@@ -15,10 +27,12 @@ function Books(name, author, pages, read, id) {
     this.id = id;
 }
 
-showBtn.addEventListener("click", function showBooks(){
-    for (let i = 0; i < myLibrary.length; i++) {};
+showButton.addEventListener("click", () => {
     console.table(myLibrary);
 });
+
+
+ // for (let i = 0; i < myLibrary.length; i++) {};
 
 
 addBookFormButton.addEventListener("click", submitForm); 
