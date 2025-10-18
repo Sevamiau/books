@@ -1,5 +1,6 @@
 const myLibrary = [];
-const idBtn = document.querySelector("#id-btn")
+const idBtn = document.querySelector("#id-btn");
+const showBtn = document.querySelector("#show-btn");
 
 function Books(name, author, pages, id) {
     if(!new.target) {
@@ -12,12 +13,6 @@ function Books(name, author, pages, id) {
     this.id = id;
 }
 
-// function showBooks() {
-//     for (let i = 0; i < myLibrary.length; i++) {
-//         console.table(myLibrary[i]);
-//     }
-// };
-
 idBtn.addEventListener("click",  
     function addBookToLibrary() {
         const uuid = crypto.randomUUID();
@@ -26,8 +21,22 @@ idBtn.addEventListener("click",
             prompt("paginas?"), uuid);
         myLibrary.push(book);
         console.table(myLibrary);
-}
+    }
 );
+
+// showBtn.addEventListener("click",
+//         function showBooks() {
+//             for (let i = 0; i < myLibrary.length; i++) {
+//             console.table(myLibrary[i]);
+//         }
+//     };
+// )
+
+showBtn.addEventListener("click", function showBooks(){
+    for (let i = 0; i < myLibrary.length; i++) {
+        console.table(myLibrary);
+    }
+});
 
 // addBookToLibrary();
 // showBooks(); 
