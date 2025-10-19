@@ -1,17 +1,18 @@
-const myLibrary = [];
-const showButton = document.querySelector("#show-button");
+const myLibrary = ["dasd", "adasd"];
+const showLibraryButton = document.querySelector("#show-library-button");
 const bookForm = document.getElementById("form-info"); 
 const addBookFormButton = bookForm.querySelector("button[type='button']"); 
 const dialogElem = document.getElementById("dialog");
-const showBtn = document.querySelector(".show");
-const closeBtn = document.querySelector(".close");
+const showButton = document.querySelector(".show");
+const closeButton = document.querySelector(".close");
+const libraryDisplay = document.querySelector("#library-display")
 
 
-showBtn.addEventListener("click", () => {
+showButton.addEventListener("click", () => {
   dialogElem.showModal();
 });
 
-closeBtn.addEventListener("click", () => {
+closeButton.addEventListener("click", () => {
   dialogElem.close();
 });
 
@@ -27,13 +28,14 @@ function Books(name, author, pages, read, id) {
     this.id = id;
 }
 
-showButton.addEventListener("click", () => {
+showLibraryButton.addEventListener("click", () => {
+    for (let i =0; i < myLibrary.length; i++) {
+        const listLibrary = document.createElement("li");
+        listLibrary.textContent = myLibrary[i];
+        libraryDisplay.appendChild(listLibrary);
+    }
     console.table(myLibrary);
 });
-
-
- // for (let i = 0; i < myLibrary.length; i++) {};
-
 
 addBookFormButton.addEventListener("click", submitForm); 
 
