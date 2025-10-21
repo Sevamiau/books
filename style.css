@@ -1,20 +1,67 @@
+
 body {
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background-color: var(--background-light);
+    min-height: 100vh;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+}
+
+
+.btn.primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
 }
 
 button {
-    height: 100px;
-    width: 100px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.delete-button {
+    background-color: #fa584c; 
+    color: var(--text-color-light);
+    margin-right: 10px;
+}
+
+.delete-button:hover {
+    background-color: #e14545; 
+}
+
+.toggle-read-button {
+    background-color: #78dc7b; 
+    color: var(--text-color-light);
+}
+
+.toggle-read-button:hover {
+    background-color: #388e3c; 
+}
+
+.book-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+    padding: 20px 0;
+
 }
 
 .book-card {
-    width: 180px;
-    height: 330px;
-    background-color: lightskyblue;
-    border-radius: 10% 10%;
-    text-align: center;
+    background-color: pink;
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin: 10px;
-    opacity: 70%;
+}
+
+.book-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow-hover);
 }
