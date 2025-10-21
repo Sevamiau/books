@@ -8,6 +8,35 @@ const closeButton = document.querySelector(".close");
 const libraryDisplay = document.querySelector("#library-display");
 const create = document.querySelector("#create");
 
+function Books(name, author, pages, read, id) {
+    if(!new.target) {
+        throw Error("ponele new siome");
+    }
+
+    this.name = name;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.id = id;
+}
+
+addBookFormButton.addEventListener("click", submitForm); 
+
+function submitForm() {
+    const formData = new FormData(bookForm);
+    
+    const name = formData.get('book-name');
+    const author = formData.get('author');
+    const pages = parseInt(formData.get('pages'));
+    const readValue = formData.get('read'); 
+    const read = (readValue === 'leido');
+    const uuid = crypto.randomUUID();
+
+    let book = new Books(name, author, pages, read, uuid);
+    myLibrary.push(book);
+
+    bookForm.reset();
+}
 
 create.addEventListener("click", () => {
     myLibrary.forEach(book => {
@@ -54,35 +83,9 @@ closeButton.addEventListener("click", () => {
   dialogElem.close();
 });
 
-function Books(name, author, pages, read, id) {
-    if(!new.target) {
-        throw Error("ponele new siome");
-    }
-
-    this.name = name;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = id;
-}
 
 
-addBookFormButton.addEventListener("click", submitForm); 
 
-function submitForm() {
-    const formData = new FormData(bookForm);
-    
-    const name = formData.get('book-name');
-    const author = formData.get('author');
-    const pages = parseInt(formData.get('pages'));
-    const readValue = formData.get('read'); 
-    const read = (readValue === 'leido');
-    const uuid = crypto.randomUUID();
 
-    let book = new Books(name, author, pages, read, uuid);
-    myLibrary.push(book);
-
-    bookForm.reset();
-}
 
 
