@@ -43,42 +43,42 @@ function addBookToLibrary() {
 }
 
 
-// create.addEventListener("click", () => {
+create.addEventListener("click", () => {
 
-//     myLibrary.forEach(book => {
-//         const bookCard = document.createElement("div");
-//         bookCard.classList.add("book-card");
+    myLibrary.forEach(book => {
+        const bookCard = document.createElement("div");
+        bookCard.classList.add("book-card");
 
-//         const titlePara = document.createElement("p");
-//         titlePara.textContent = `Name: ${book.name}`;
+        const titlePara = document.createElement("p");
+        titlePara.textContent = `Name: ${book.name}`;
 
-//         const authorPara = document.createElement("p");
-//         authorPara.textContent = `Author ${book.author}`
+        const authorPara = document.createElement("p");
+        authorPara.textContent = `Author ${book.author}`
 
-//         const pagesPara = document.createElement("p");
-//         pagesPara.textContent = `pages ${book.pages}`;
+        const pagesPara = document.createElement("p");
+        pagesPara.textContent = `pages ${book.pages}`;
 
-//         const readStatusPara = document.createElement("p");
-//         readStatusPara.textContent = `Read: ${book.read ? 'Yes' : 'No'}`;
+        const readStatusPara = document.createElement("p");
+        readStatusPara.textContent = `Read: ${book.read ? 'Yes' : 'No'}`;
 
-//         const idNumber = document.createElement("p");
-//         idNumber.textContent = `id Number ${book.id}`;
+        const idNumber = document.createElement("p");
+        idNumber.textContent = `id Number ${book.id}`;
 
-//         bookCard.appendChild(titlePara);
-//         bookCard.appendChild(authorPara);
-//         bookCard.appendChild(pagesPara);
-//         bookCard.appendChild(readStatusPara);
-//         bookCard.appendChild(idNumber);
+        bookCard.appendChild(titlePara);
+        bookCard.appendChild(authorPara);
+        bookCard.appendChild(pagesPara);
+        bookCard.appendChild(readStatusPara);
+        bookCard.appendChild(idNumber);
 
-//         const currentDiv = document.getElementById("divperro1");
+        const currentDiv = document.getElementById("divperro1");
 
-//         if (currentDiv) {
-//             document.body.insertBefore(bookCard, currentDiv);
-//         } else {
-//             document.body.appendChild(bookCard);
-//         }
-//     })
-// } );
+        if (currentDiv) {
+            document.body.insertBefore(bookCard, currentDiv);
+        } else {
+            document.body.appendChild(bookCard);
+        }
+    })
+} );
 
 function addBookToLibrary() {
     const formData = new FormData(bookForm);
