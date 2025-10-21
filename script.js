@@ -1,4 +1,4 @@
-const myLibrary = [];
+const myLibrary = ["dasdads", "asiuaif"];
 const showLibraryButton = document.querySelector("#show-library-button");
 const bookForm = document.getElementById("form-info"); 
 const addBookFormButton = bookForm.querySelector("button[type='button']"); 
@@ -9,22 +9,41 @@ const libraryDisplay = document.querySelector("#library-display");
 const create = document.querySelector("#create");
 
 
-
 create.addEventListener("click", () => {
     
+    for (let i = 0; i < myLibrary.length; i++){
+    
     const newDiv = document.createElement("div");
+    
     const newContent = document.createTextNode("perros");
 
     newDiv.appendChild(newContent);
-
-    const currentDiv =  document.getElementById("div1");
+    
+    newDiv.classList.add("book-card");
+    
+    const currentDiv =  document.getElementById("divperro1");
     document.body.insertBefore(newDiv, currentDiv);
+    }
+} );
 
-} )
 
+showLibraryButton.addEventListener("click", () => {
+
+
+    // for (let i =0; i < myLibrary.length; i++) {
+    //     const listLibrary = document.createElement("div");
+    //     listLibrary.textContent = myLibrary[i];
+    //     libraryDisplay.appendChild(listLibrary);
+    // }
+    // for (let key in myLibrary) {
+    //     console.log(key);1
+    //     console.log(myLibrary[key])
+    // }
+    console.table(myLibrary);
+});
 
 showButton.addEventListener("click", () => {
-  dialogElem.showModal();
+    dialogElem.showModal();
 });
 
 closeButton.addEventListener("click", () => {
@@ -44,18 +63,6 @@ function Books(name, author, pages, read, id) {
  }
 
 
-showLibraryButton.addEventListener("click", () => {
-    // for (let i =0; i < myLibrary.length; i++) {
-    //     const listLibrary = document.createElement("div");
-    //     listLibrary.textContent = myLibrary[i];
-    //     libraryDisplay.appendChild(listLibrary);
-    // }
-    // for (let key in myLibrary) {
-    //     console.log(key);1
-    //     console.log(myLibrary[key])
-    // }
-    console.table(myLibrary);
-});
 
 
 addBookFormButton.addEventListener("click", submitForm); 
@@ -75,3 +82,5 @@ function submitForm() {
 
     bookForm.reset();
 }
+
+

@@ -1,0 +1,9 @@
+.book-card {
+    width: 180px;
+    height: 330px;
+    background-color: lightskyblue;
+    border-radius: 10% 10%;
+    text-align: center;
+    margin: 10px;
+    opacity: 70%;
+}
