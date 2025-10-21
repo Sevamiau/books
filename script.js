@@ -10,40 +10,39 @@ const create = document.querySelector("#create");
 
 
 create.addEventListener("click", () => {
-    
-    // for (let i = 0; i < myLibrary.length; i++){
-    
-    // const newDiv = document.createElement("div");
+    myLibrary.forEach(book => {
+        const bookCard = document.createElement("div");
+        bookCard.classList.add("book-card");
 
-    // const newContent = document.createTextNode("perros");
+        const titlePara = document.createElement("p");
+        titlePara.textContent = `Title: ${book.title}`;
 
-    // newDiv.appendChild(newContent);
-    
-    // newDiv.classList.add("book-card");
-    
-    // const currentDiv =  document.getElementById("divperro1");
-    // document.body.insertBefore(newDiv, currentDiv);
+        const authorPara = document.createElement("p");
+        authorPara.textContent = `Author ${book.author}`
 
-    for (let key in myLibrary) {
-        console.log(key);1
-        console.log(myLibrary[key])
-    }
+        const pagesPara = document.createElement("p");
+        pagesPara.textContent = `pages ${book.pages}`;
 
+        const readStatusPara = document.createElement("p");
+        readStatusPara.textContent = `Read: ${book.read ? 'Yes' : 'No'}`;
+
+        bookCard.appendChild(titlePara);
+        bookCard.appendChild(authorPara);
+        bookCard.appendChild(pagesPara);
+        bookCard.appendChild(readStatusPara);
+
+        const currentDiv = document.getElementById("divperro1");
+
+        if (currentDiv) {
+            document.body.insertBefore(bookCard, currentDiv);
+        } else {
+            document.body.appendChild(bookCard);
+        }
+    })
 } );
 
 
 showLibraryButton.addEventListener("click", () => {
-
-
-    // for (let i =0; i < myLibrary.length; i++) {
-    //     const listLibrary = document.createElement("div");
-    //     listLibrary.textContent = myLibrary[i];
-    //     libraryDisplay.appendChild(listLibrary);
-    // }
-    // for (let key in myLibrary) {
-    //     console.log(key);1
-    //     console.log(myLibrary[key])
-    // }
     console.table(myLibrary);
 });
 
@@ -65,9 +64,7 @@ function Books(name, author, pages, read, id) {
     this.pages = pages;
     this.read = read;
     this.id = id;
- }
-
-
+}
 
 
 addBookFormButton.addEventListener("click", submitForm); 
