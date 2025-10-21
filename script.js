@@ -1,4 +1,4 @@
-const myLibrary = ["dasdads", "asiuaif"];
+const myLibrary = [];
 const showLibraryButton = document.querySelector("#show-library-button");
 const bookForm = document.getElementById("form-info"); 
 const addBookFormButton = bookForm.querySelector("button[type='button']"); 
@@ -11,19 +11,24 @@ const create = document.querySelector("#create");
 
 create.addEventListener("click", () => {
     
-    for (let i = 0; i < myLibrary.length; i++){
+    // for (let i = 0; i < myLibrary.length; i++){
     
-    const newDiv = document.createElement("div");
-    
-    const newContent = document.createTextNode("perros");
+    // const newDiv = document.createElement("div");
 
-    newDiv.appendChild(newContent);
+    // const newContent = document.createTextNode("perros");
+
+    // newDiv.appendChild(newContent);
     
-    newDiv.classList.add("book-card");
+    // newDiv.classList.add("book-card");
     
-    const currentDiv =  document.getElementById("divperro1");
-    document.body.insertBefore(newDiv, currentDiv);
+    // const currentDiv =  document.getElementById("divperro1");
+    // document.body.insertBefore(newDiv, currentDiv);
+
+    for (let key in myLibrary) {
+        console.log(key);1
+        console.log(myLibrary[key])
     }
+
 } );
 
 
