@@ -7,15 +7,15 @@ body {
     flex-direction: column;
 }
 
-
-.btn.primary:hover {
-    transform: translateY(-2px);
-}
-
 button {
     border: none;
     border-radius: 10px;
     font-weight: 600;
+}
+
+.books-container {
+    display: flex;
+
 }
 
 .delete-button {
@@ -35,13 +35,6 @@ button {
 
 .toggle-read-button:hover {
     background-color: #388e3c; 
-}
-
-.book-grid {
-    display: grid; 
-    gap: 30px;  
-    padding: 20px 0; 
-
 }
 
 .book-card {
