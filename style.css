@@ -2,8 +2,6 @@
 body {
     font-family: 'Roboto', sans-serif; 
     line-height: 1.6;
-    color: var(--text-color-dark);
-    background-color: var(--background-light);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -11,9 +9,7 @@ body {
 
 
 .btn.primary:hover {
-    background-color: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-light);
 }
 
 button {
@@ -43,25 +39,25 @@ button {
 
 .book-grid {
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px; 
-    padding: 20px 0;
+    gap: 30px;  
+    padding: 20px 0; 
 
 }
 
 .book-card {
+    width: 300px;
+    height: 300px;
     background-color: pink;
     border-radius: 10px;
-    box-shadow: var(--shadow-light);
     padding: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin: 10px;
+    font-weight: 600;
+
+
+    gap: 5px;
 }
 
 .book-card:hover {
     transform: translateY(-5px); 
-    box-shadow: var(--shadow-hover);
 }
