@@ -113,8 +113,6 @@ booksContainer.addEventListener("click", (event) => {
     }
 });
 
-
-
 showButton.addEventListener("click", () => {
     dialogElem.showModal();
 });
@@ -122,7 +120,6 @@ showButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   dialogElem.close();
 });
-
 
 function deleteBook(bookId) {
     const bookIndex = myLibrary.findIndex(book => book.id == bookId);

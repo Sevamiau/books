@@ -1,19 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    /* background-color: lightblue; */
+    grid-template-rows: 1fr;
+
 }
 
 
 .header {
     background-color: lightpink;
-    grid-column: 1/3;
 }
 
 
@@ -23,6 +21,7 @@ body {
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 8px;
+    gap: 2em;
 }
 
 .book-card {
@@ -41,42 +40,4 @@ body {
 
 
 
-/* 
-body {
-    margin: auto 0;
-}
 
-button {
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-}
-
-.books-container {
-    display: flex;
-}
-
-.delete-button {
-    background-color: #fa584c; 
-    color: var(--text-color-light);
-    margin-right: 10px;
-}
-
-.delete-button:hover {
-    background-color: #e14545; 
-}
-
-.toggle-read-button {
-    background-color: #78dc7b; 
-    color: var(--text-color-light);
-}
-
-.toggle-read-button:hover {
-    background-color: #388e3c; 
-}
-
-
-
-.book-card:hover {
-    transform: translateY(-5px); 
-} */
