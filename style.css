@@ -44,7 +44,6 @@ body {
     display: flex;
     flex-direction: column;
     color: rgb(79, 78, 78);
-
 }
 
 li {
@@ -75,7 +74,6 @@ h1 {
     font-weight: 900;
     color: rgb(49, 45, 45);
     text-decoration: underline;
-
 }
 
 .delete-button,
