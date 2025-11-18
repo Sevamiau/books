@@ -1,14 +1,15 @@
 const myLibrary = [
     { id: 'initial-1', name: "The Hobbit", author: "J.R.R. Tolkien", pages: 310, read: true },
     { id: 'initial-2', name: "Pride and Prejudice", author: "Jane Austen", pages: 432, read: false },
-    { id: 'initial-3', name: "1984", author: "George Orwell", pages: 328, read: true }
+    { id: 'initial-3', name: "1984", author: "George Orwell", pages: 328, read: true },
+    { id: 'initial-4', name: "1900", author: "El perro Loco", pages: 666, read: true }
 ];
 
 const bookForm = document.getElementById("form-info");
 const addBookFormButton = bookForm.querySelector("button[type='button']");
 
 const dialogElem = document.getElementById("dialog");
-const showButton = document.querySelector(".show"); 
+const showButton = document.querySelector(".add-book-button"); 
 const closeButton = document.querySelector(".close"); 
 
 const create = document.querySelector("#create");
