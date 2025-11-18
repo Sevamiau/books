@@ -1,17 +1,19 @@
 body {
     margin: 0;
     padding: 0;
+
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    background-color: lightblue;
+    grid-template-columns: 1fr 4fr;
+    /* background-color: lightblue; */
 }
+
 
 .header {
     background-color: lightpink;
+    grid-column: 1/3;
 }
 
 

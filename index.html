@@ -7,34 +7,34 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">header </div>
-                <div class="buttons">    
-                    <button id="create">create</button>
-                    <button class="show">Agregar libro</button>
-                </div>
+        <div class="header">header</div>
+        <div class="buttons">    
+            <button id="create">create</button>
+            <button class="show">Agregar libro</button>
+        </div>
         <div class="dialog-popup">
             <dialog id="dialog">
-                    <form id="form-info">
+                <form id="form-info">
+                    <div>
+                        <label for="book-name">Nombre del libro</label>
+                        <input type="text" name="book-name" id="book-name" placeholder="Nombre del libro" required>
+
+                        <label for="author">Autor del libro</label>
+                        <input type="text" name="author" id="author" placeholder="Nombre del autor"required>
+
+                        <label for="pages">Cantidad de paginas</label>
+                        <input type="number" name="pages" id="pages" placeholder="Cantidad de paginas"required>
+                    </div>       
+                    <div class="radio-buttons">
                         <div>
-                            <label for="book-name">Nombre del libro</label>
-                            <input type="text" name="book-name" id="book-name" placeholder="Nombre del libro" required>
-
-                            <label for="author">Autor del libro</label>
-                            <input type="text" name="author" id="author" placeholder="Nombre del autor"required>
-
-                            <label for="pages">Cantidad de paginas</label>
-                            <input type="number" name="pages" id="pages" placeholder="Cantidad de paginas"required>
-                        </div>       
-                        <div class="radio-buttons">
-                            <div>
-                                <input type="radio" id="leido" name="read" value="leido">
-                                <label for="leido">Leido</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="no-leido" name="read" value="no-leido" checked>
-                                <label for="no-leido">No leido</label>
-                            </div>
+                            <input type="radio" id="leido" name="read" value="leido">
+                            <label for="leido">Leido</label>
                         </div>
+                        <div>
+                            <input type="radio" id="no-leido" name="read" value="no-leido" checked>
+                            <label for="no-leido">No leido</label>
+                        </div>
+                    </div>
                         <div class="submit-button">
                             <button type="button">Agregar</button>
                         </div>
@@ -42,10 +42,8 @@
                 <button class="close">cerrar</button>
             </dialog>
         </div>    
-
         <div id="books-container"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
