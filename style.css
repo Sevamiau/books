@@ -5,16 +5,16 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
     min-height: 100vh;
-    justify-content: center;
 }
 
 .header {
     background-color: lightpink;
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-
 
 #books-container {
     display: grid; 
@@ -38,5 +38,23 @@ li {
     list-style-type: none;
 }
 
+.add-book-button {
+    background-color: hsl(177, 70%, 68%);
+    border: none;
+    padding: 1em;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 900; 
+}
 
+#create {
+    background-color: lightpink;
+    border: none;
+    color: pink;
+}
 
+h1 {
+    font-size: 3em;
+    font-weight: 900;
+}
